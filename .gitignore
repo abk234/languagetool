@@ -35,3 +35,8 @@ bin/
 
 .direnv/
 .envrc
+# --- local fork ops (abk234) ---
+scripts/languagetool-app.env
+scripts/.languagetool-lan-proxy.pid
+docker/compose/docker-compose.override.yml
+docker/compose/ngrams/
