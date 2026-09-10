@@ -9,12 +9,11 @@ services:
     ports:
       - "${LANGUAGETOOL_PORT:-8010}:8010"
     environment:
-      Java_Xms: ${Java_Xms:-256m}
-      Java_Xmx: ${Java_Xmx:-512m}
-      # Optional n-gram language model (mount ./ngrams and set path)
-      # langtool_languageModel: /ngrams
-    # volumes:
-    #   - ./ngrams:/ngrams:ro
+      Java_Xms: ${Java_Xms:-512m}
+      Java_Xmx: ${Java_Xmx:-2g}
+      langtool_languageModel: /ngrams
+    volumes:
+      - ./ngrams:/ngrams:ro
     healthcheck:
       test:
         [
